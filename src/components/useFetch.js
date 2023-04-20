@@ -35,7 +35,8 @@ const useFetch = (url) => {
 
         return () => {
             abortControl.abort();
-            console.log("Clean Up")}
+            // console.log("Clean Up")
+        }
     }, [url])
 
     return { data, isPending, error }

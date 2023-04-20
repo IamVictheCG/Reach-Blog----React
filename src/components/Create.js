@@ -1,29 +1,46 @@
 import {useState} from 'react'
+import { useHistory } from 'react-router-dom';
 
 const Create = () => {
     const [title, setTitle] = useState(``);
     const [body, setBody] = useState(``);
     const [author, setAuthor] = useState('');
+    const [isPending, SetIsPending] = useState(false)
+    //-+-+-+-+-+
+    const history = useHistory()
 
     
     const titleVal = (e) => {
         const titleInp = document.querySelector(".title")
         setTitle(titleInp.value)
-        console.log(`Title: ${title}`)
+        // console.log(`Title: ${title}`)
     }
     const bodyVal = (e) => {
         setBody(e.target.value)
-        console.log(`Body: ${body}`)
+        // console.log(`Body: ${body}`)
     }
     const authorVal = (e) => {
         setAuthor(e.target.value)
-        console.log(`Author: ${author}`)
+        // console.log(`Author: ${author}`)
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
         const blog = { title, body, author }
         console.log(blog)
+        SetIsPending(true)
+
+        fetch("http://localhost:5000/blogs", {
+            method: 'POST',
+            headers: {"Content-Type":"application/json"},
+            body: JSON.stringify(blog)
+        }).then(() => {
+            console.log("New blog added");
+            SetIsPending(false)
+            // history.go(-1)
+            // history.go(1)
+            history.push("/")
+        })
     }
     
 
@@ -54,7 +71,8 @@ const Create = () => {
                 required
                 onChange={authorVal}
             />
-            <button type="submit">Add Blog</button>
+            {!isPending && <button type="submit">Add Blog</button>}
+            {isPending && <button type="submit" disabled>Add Blog...</button>}
 
             </form>
             {/* <p>{title}</p>
