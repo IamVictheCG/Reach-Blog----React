@@ -4,6 +4,7 @@ import Home from "./components/home"
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom' //added at 11) in Home.js
 import Create from './components/Create';
 import BlogDetails from './components/BlogDetails';
+import NotFound from './components/NotFound';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
             {/* <Route path = "/"><Home /></Route> */}
             {/* <Route path = "/"><Home /></Route> */}
             {/* <Route path = "/"><Home /></Route> */}
-            {/* <Route path = "/"><Home /></Route> */}
+            <Route path = "*"><NotFound /></Route>
           </Switch>
         </div>
       </div>

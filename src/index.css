@@ -15,7 +15,7 @@
   border-bottom: 1px solid #f2f2f2;
 }
 .navbar h1 {
-  color: #f1356d;
+  color: #25df98;
 }
 .navbar .links {
   margin-left: auto;
@@ -25,14 +25,22 @@
   text-decoration: none;
   padding: 6px;
 }
+.navbar a.new {
+  color: #000000;
+ background: #25df98;
+}
+.navbar a.new:hover {
+  color: #000000;
+ background: #fafafa;
+}
 .navbar a:hover {
-  color: #f1356d;
+  color: #25df98;
 }
 .content {
   max-width: 600px;
   margin: 40px auto;
   padding: 20px;
-  border: #f1356d 2px solid;
+  border: #25df98 2px solid;
 }
 
 /* blog previews / list */
@@ -49,7 +57,7 @@
 }
 .blog-preview h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #25df98;
   margin-bottom: 8px;
 }
 
@@ -60,12 +68,12 @@
 .blog-details h1 {
   font-size: 20px;
   margin-bottom: 10px;
-  color: #f1356d;
+  color: #25df98;
 }
 
 .blog-details strong {
   font-style: italic;
-  color: #f1356d;
+  color: #25df98;
 }
 .blog-details div {
   margin: 20px 0;
@@ -75,11 +83,11 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  /* color: #f1356d; */
+  /* color: #25df98; */
 }
 
 .blog-details button {
-  background: #f1356d;
+  background: #25df98;
   color: #fff;
   border: 0;
   padding: 8px;
@@ -125,6 +133,11 @@
   width: 88px;
   border-radius: 20px;
   color: #f2f2f2;
-  background-color: #f1356d;
+  background-color: #25df98;
   font-weight: bolder;
+}
+
+.not-found a:hover {
+  color: #09945f;
+  
 }
