@@ -73,7 +73,7 @@
 
 .blog-details article div p {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   flex-wrap: wrap;
   /* color: #f1356d; */
 }
