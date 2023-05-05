@@ -30,7 +30,7 @@ const Create = () => {
         console.log(blog)
         SetIsPending(true)
 
-        fetch("http://localhost:5000/blogs", {
+        fetch("https://reach-blog-victorcg.netlify.app/blogs", {
             method: 'POST',
             headers: {"Content-Type":"application/json"},
             body: JSON.stringify(blog)
