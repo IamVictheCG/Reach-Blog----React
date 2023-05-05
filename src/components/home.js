@@ -218,8 +218,7 @@ const Home = () => {
     // );
     
     //11)React Router=====================================================================
-    // const {data: blogs, isPending, error} = useFetch("http://localhost:5000/blogs")
-    const {data: blogs, isPending, error} = useFetch("https://reach-blog-victorcg.netlify.app/blog")
+    const {data: blogs, isPending, error} = useFetch("http://localhost:5000/blogs")
     return (
         <div className='homePage'>
             {/* <h1>Home page</h1> */}
